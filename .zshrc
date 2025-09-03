@@ -29,9 +29,6 @@ bindkey '^[[B' history-search-forward
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH=$PATH:/Users/joseanmartinez/.spicetify
 
@@ -112,7 +109,6 @@ eval "$(zoxide init zsh)"
 alias cd="z"
 
 alias python="python3"
-PATH=/Users/joseanmartinez/.rbenv/shims:/Users/joseanmartinez/.rbenv/shims:/Users/joseanmartinez/.nvm/versions/node/v18.18.2/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/joseanmartinez/.ebcli-virtual-env/executables:/Users/joseanmartinez/.spicetify:/Users/joseanmartinez/.spicetify:~/Library/Python/3.12/bin
 
 # --- Yazi Setup ---
 export EDITOR="nvim"
@@ -125,4 +121,11 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+
+# -- postgres cli tools
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
